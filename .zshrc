@@ -1,3 +1,4 @@
+# ZSHRC Version: 1.1 2022-07-23
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/Bin:/usr/local/bin:$PATH
 
@@ -162,6 +163,12 @@ ex ()
 # GENERAL
 alias la='ls -A --color=auto'
 alias lk="ps -aef |grep -v grep | grep -i "
+alias path="echo $PATH"
+
+# VERSIONS
+alias bashrc='grep .BASHRC ~/.bashrc'
+alias vimrc='grep VIMRC ~/.vimrc'
+alias zshrc='grep "ZSHRC Version" ~/.zshrc | grep -v grep'
 
 # UTILS
 alias df='df -ht ext4 && df -ht btrfs '
@@ -175,13 +182,14 @@ alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 # APT
 alias clean='sudo apt clean'
 alias apti='sudo apt install'
-alias aptp='sudo apt policy'
-alias apts='apt search'
+alias aptp='sudo apt-cache policy'
+alias apts='apt-cache search'
 alias aptu='sudo apt update'
 alias aptd='sudo apt dist-upgrade'
 
 # SHORTCUTS TO SERVERS
-alias web='ssh pi@192.168.1.99'
+alias web='ssh ilan@192.168.1.99'
+alias wttr='curl wttr.in'
 
 # SHORTCUTS TO DIRECTORIES
 alias doc='cd ~/Documents'
@@ -206,4 +214,3 @@ alias yt-audio-best="python3 /usr/local/bin/youtube-dl --extract-audio --audio-f
 alias yt-audio-flac="python3 /usr/local/bin/youtube-dl --extract-audio --audio-format flac "
 alias yt-audio-mp3="python3 /usr/local/bin/youtube-dl --extract-audio --audio-format mp3 "
 alias yt-video-audio-best="python3 /usr/local/bin/youtube-dl -f bestvideo+bestaudio "
-
