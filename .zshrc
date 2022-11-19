@@ -1,4 +1,4 @@
-# ZSHRC Version: 1.1 2022-07-23
+# ZSHRC Version: 1.2 2022-11-19
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/Bin:/usr/local/bin:$PATH
 
@@ -171,7 +171,7 @@ alias vimrc='grep VIMRC ~/.vimrc'
 alias zshrc='grep "ZSHRC Version" ~/.zshrc | grep -v grep'
 
 # UTILS
-alias df='df -ht ext4 && df -ht btrfs '
+alias df='df -ht ext4 '
 alias free='free -h'
 
 # TOP
@@ -182,8 +182,8 @@ alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 # APT
 alias clean='sudo apt clean'
 alias apti='sudo apt install'
-alias aptp='sudo apt-cache policy'
-alias apts='apt-cache search'
+alias aptp='sudo apt policy'
+alias apts='apt search'
 alias aptu='sudo apt update'
 alias aptd='sudo apt dist-upgrade'
 
@@ -209,8 +209,9 @@ alias gp='git push origin master'
 alias gs='git status'
 
 # YOUTUBE-DL
-alias youtube-dl-upgrade='wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl'
-alias yt-audio-best="python3 /usr/local/bin/youtube-dl --extract-audio --audio-format best "
-alias yt-audio-flac="python3 /usr/local/bin/youtube-dl --extract-audio --audio-format flac "
-alias yt-audio-mp3="python3 /usr/local/bin/youtube-dl --extract-audio --audio-format mp3 "
-alias yt-video-audio-best="python3 /usr/local/bin/youtube-dl -f bestvideo+bestaudio "
+alias youtube-dl-upgrade='wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/bin/youtube-dl'
+alias yt="python3 /usr/bin/youtube-dl "
+alias yt-audio-best="python3 /usr/bin/youtube-dl --extract-audio --audio-format best "
+alias yt-audio-flac="python3 /usr/bin/youtube-dl --extract-audio --audio-format flac "
+alias yt-audio-mp3="python3 /usr/bin/youtube-dl --extract-audio --audio-format mp3 "
+alias yt-video-audio-best="python3 /usr/bin/youtube-dl -f bestvideo+bestaudio "
